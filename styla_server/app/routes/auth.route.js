@@ -2,7 +2,8 @@ const { verifySignUp } = require("../middleware");
 var bodyParser = require('body-parser')
 const controller = require("../controllers/auth.controller");
 var upload = require('../middleware/upload')
-const verify = require('../routes/verifytoken.route')
+const verify = require('../routes/verifytoken.route');
+const { user } = require("../models");
 /////
 //format for fields [{ name: 'nic', maxCount: 1 }]
 var cpUpload = upload.fields([{ name: 'profileimage', maxCount: 1 }]);

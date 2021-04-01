@@ -113,9 +113,6 @@ exports.signin = (req, res) => {
           message: "Invalid Password!"
         });
       }
-
-      
-
       var authorities = [];
 
       for (let i = 0; i < user.roles.length; i++) {

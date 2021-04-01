@@ -4,8 +4,9 @@
   "description": "styla an e-commerce api server",
   "main": "server.js",
   "scripts": {
-    "devStart": "nodemon server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"node server.js",
+    "devStart": "nodemon server.js"
   },
   "author": "",
   "license": "ISC",

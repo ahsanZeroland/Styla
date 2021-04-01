@@ -3,13 +3,14 @@ const cors = require("cors");
 const dbConfig = require("./app/config/db.config");
 
 const app = express();
-// app.use(bodyParser.urlencoded({ extended: false }))
 
 var corsOptions = {
   origin: "http://localhost:8081"
 };
 
 app.use(cors(corsOptions));
+
+const port = 8080;
 
 const db = require("./app/models");
 const Role = db.role;
@@ -36,15 +37,11 @@ require('./app/routes/category.route')(app);
 require('./app/routes/vender.route')(app);
 require('./app/routes/slider.route')(app);
 
-
-const port = 8080
-
 // simple route
 app.get("/", (req, res) => {
   res.json({ message: "Welcome to bezkoder application." });
 });
 
-// set port, listen for requests
 const PORT = process.env.PORT || port;
 app.listen(PORT, () => {
   console.log(`Server port ${PORT}.`);

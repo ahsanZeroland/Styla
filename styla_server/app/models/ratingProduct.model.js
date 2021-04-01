@@ -10,4 +10,4 @@ var RatingProduct = mongoose.model(
     created_at:{ type: Date },
 }), { versionKey: false },{strict: false});
 
-module.exports = RatingProduct;
+module.exports = RatingProduct; 
